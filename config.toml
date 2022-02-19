@@ -1,0 +1,22 @@
+baseURL = 'https://www.hazefest.ro/'
+languageCode = 'en-us'
+title = 'Haze Fest'
+theme = "ananke"
+[params]
+  body_classes = "avenir bg-purple white test"
+  custom_css = ["custom.css"]
+  text_color = "white"
+  sectionPagesMenu = "main"
+
+
+[[params.ananke_socials]]
+name = "facebook"
+url = "https://www.facebook.com/hazefestftw/"
+label = "TND Facebook"
+
+[[params.ananke_socials]]
+name = "instagram"
+url = "https://www.instagram.com/hazefestromania/"
+label = "TND Instagram"
+
+[[menu.main]]
