@@ -3,10 +3,12 @@ languageCode = 'en-us'
 title = 'Haze Fest'
 theme = "ananke"
 [params]
-  body_classes = "avenir bg-purple white test"
+  body_classes = "avenir white black"
   custom_css = ["custom.css"]
   text_color = "white"
   sectionPagesMenu = "main"
+  google_fonts = [["Bebas Neue", "400"]]
+  heading_font = "Bebas Neue"
 
 
 [[params.ananke_socials]]
@@ -20,3 +22,9 @@ url = "https://www.instagram.com/hazefestromania/"
 label = "TND Instagram"
 
 [[menu.main]]
+[[menu.main]]
+  identifier = 'Tickets'
+  name = 'Tickets'
+  title = 'tickets'
+  url = 'https://www.iabilet.ro/bilete-haze-fest-2022-71613/'
+  weight = 40

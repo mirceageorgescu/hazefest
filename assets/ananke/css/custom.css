@@ -1,3 +1,16 @@
 body {
-	/*background:  red!important;*/
+	background: #000;
+}
+.main {
+	background: #7a30f5;
+}
+.bebas {
+	font-family: "Bebas Neue";
+}
+.contact__map {
+	width: 100%;
+    height: 100vh;
+    border: 0;
+    text-align: center;
+    color: black;
 }

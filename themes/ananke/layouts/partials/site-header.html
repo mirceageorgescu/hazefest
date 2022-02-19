@@ -1,36 +1,18 @@
-{{ $featured_image := partial "func/GetFeaturedImage.html" . }}
-{{ if $featured_image }}
-  {{/* Trimming the slash and adding absURL make sure the image works no matter where our site lives */}}
-  {{ $featured_image := (trim $featured_image "/") | absURL }}
-  <header class="cover bg-top" style="background-image: url('{{ $featured_image }}');">
-    <div class="{{ .Site.Params.cover_dimming_class | default "bg-black-60" }}">
-      {{ partial "site-navigation.html" .}}
-      <div class="tc-l pv4 pv6-l ph3 ph4-ns">
-        <h1 class="f2 f-subheadline-l fw2 white-90 mb0 lh-title">
-          {{ .Title | default .Site.Title }}
-        </h1>
-        {{ with .Params.description }}
-          <h2 class="fw1 f5 f3-l white-80 measure-wide-l center mt3">
-            {{ . }}
-          </h2>
-        {{ end }}
-      </div>
+<header>
+  {{ partial "site-navigation.html" . }}
+  <div class="dt w-100 tc white cover hero" style="background: #7a30f5 url(/hero-bg.jpg) no-repeat top center; background-size: cover; height: calc(100vh - 103px);">
+    <div class="dtc v-mid">
+      <header class="white-100 center">
+        <!--<img src="/hero.png" class="w-100 mw6">-->
+        <div class="mw8 mt5 ph3 center">
+          <h2 class="f1 f-headline-ns fw4 ttu mt0 mb4 bebas lh-solid">all you can handle<br>craft beer tasting sessions</h2>
+          <h3 class="f3 f1-ns fw4 ttu mt0 mb2 bebas lh-solid">30+ INTERNATIONAL BREWERIES, 60+ BEERS/DAY</h3>
+          <h4 class="f4 f3-ns dib ph2 mt0 mb5 pv1 fw4 ttu bebas">18-19 JUNE 2022 – club expirat, bucurești</h4>
+          <div>
+            <a class="f4 f2-ns grow no-underline br-pill ph5 pv3 pv4-ns mb2 dib white bg-dark-pink bebas" href="https://www.iabilet.ro/bilete-haze-fest-2022-71613/" target="_blank">Get you ticket now!</a>
+          </div>
+        </div>
+      </header>
     </div>
-  </header>
-{{ else }}
-  <header>
-    <div class="pb3-m pb6-l {{ .Site.Params.background_color_class | default "bg-black" }}">
-      {{ partial "site-navigation.html" . }}
-      <div class="tc-l pv3 ph3 ph4-ns">
-        <h1 class="f2 f-subheadline-l fw2 light-silver mb0 lh-title">
-          {{ .Title | default .Site.Title }}
-        </h1>
-        {{ with .Params.description }}
-          <h2 class="fw1 f5 f3-l white-80 measure-wide-l center lh-copy mt3 mb4">
-            {{ . }}
-          </h2>
-        {{ end }}
-      </div>
-    </div>
-  </header>
-{{ end }}
+  </div>
+</header>

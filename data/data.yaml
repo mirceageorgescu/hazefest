@@ -1,9 +1,0 @@
-params:
-  ananke_socials:
-  - name: facebook
-    url: https://www.facebook.com/hazefestftw/
-    label: TND Facebook
-  - name: instagram
-    url: 
-    label: https://www.instagram.com/hazefestromania/
-  body_classes: "avenir bg-near-white test"

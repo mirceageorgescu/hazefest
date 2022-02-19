@@ -1,18 +1,27 @@
 {{ define "header" }}{{ partial "page-header.html" . }}{{ end }}
 {{ define "main" }}
-  <div class="flex-l mt2 mw8 center">
-    <article class="center cf pv5 ph3 ph4-ns mw7">
-      <header>
-        <p class="f6 b helvetica tracked">
-          {{ humanize .Section | upper  }}
-        </p>
-        <h1 class="f1">
+  <div class="w100 center">
+    <header class="center tc pv5" style="background: #7a30f5 url(/dots.svg) no-repeat top center; background-size: cover;">
+      <p class="f6 b helvetica tracked">
+        {{ humanize .Section | upper  }}
+      </p>
+      <h1 class="f1">
+        {{ if .Title }}
           {{ .Title }}
-        </h1>
-      </header>
+        {{ end }}
+      </h1>
+    </header>
+    {{ if .Content }}
+    <article class="center cf pv5 ph3 ph4-ns mw7">
       <div class="nested-copy-line-height lh-copy f4 nested-links {{ $.Param "text_color" | default "mid-gray" }}">
         {{ .Content }}
       </div>
     </article>
+    {{ end }}
+    {{ if .Params.hasMap }}
+      <div class="js-contact-map contact__map" data-place-id="ChIJEfD1x7D_sUARM5-TUGbYk2o" data-lat="44.4155219" data-lng="26.0929262" data-zoom="14"></div>
+      <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?&amp;libraries=places&amp;key=AIzaSyDjqI3vXRv94I6NegKjbaLLqiFuQz5gjqY"></script>
+      <script type="text/javascript" src="/app.js"></script>
+    {{ end }}
   </div>
 {{ end }}
