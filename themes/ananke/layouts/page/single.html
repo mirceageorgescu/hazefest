@@ -11,6 +11,7 @@
         {{ end }}
       </h1>
     </header>
+
     {{ if .Content }}
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <div class="nested-copy-line-height lh-copy f4 nested-links {{ $.Param "text_color" | default "mid-gray" }}">
@@ -18,10 +19,16 @@
       </div>
     </article>
     {{ end }}
+
     {{ if .Params.hasMap }}
       <div class="js-contact-map contact__map" data-place-id="ChIJEfD1x7D_sUARM5-TUGbYk2o" data-lat="44.4155219" data-lng="26.0929262" data-zoom="14"></div>
       <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?&amp;libraries=places&amp;key=AIzaSyDjqI3vXRv94I6NegKjbaLLqiFuQz5gjqY"></script>
       <script type="text/javascript" src="/app.js"></script>
     {{ end }}
+
+    {{ if .Params.iframe }}
+      <iframe class="w-100" style="height:1500px" src="{{ .Params.iframe }}"></iframe>
+    {{ end }}
+
   </div>
 {{ end }}

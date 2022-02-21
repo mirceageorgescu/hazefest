@@ -22,9 +22,3 @@ url = "https://www.instagram.com/hazefestromania/"
 label = "TND Instagram"
 
 [[menu.main]]
-[[menu.main]]
-  identifier = 'Tickets'
-  name = 'Tickets'
-  title = 'tickets'
-  url = 'https://www.iabilet.ro/bilete-haze-fest-2022-71613/'
-  weight = 40
