@@ -33,7 +33,7 @@
     {{ if .Params.breweries }}
       <article class="center cf pv5 ph3 ph4-ns mw7">
         <ul class="cf w-100 ph0">
-          {{ range .Params.breweries }}
+          {{ range sort .Params.breweries "name" }}
           <li class="list fl w-50 w-third-m w-25-ns ph4 pv4">
             <a class="db aspect-ratio aspect-ratio--1x1" href="{{ .url }}" title="{{ .name }}">
               <img src="{{ .logo }}" alt="{{ .name }}" class="db bg-center cover aspect-ratio--object">
