@@ -9,12 +9,14 @@ breweries:
   - name: "Frau Gruber"
     url: "https://fraugruber-craftbrewing.com/"
     logo: "/breweries/frau-gruber.png"
+    active: true
   - name: "Gross"
     url: "https://gross.beer/en/"
     logo: "/breweries/gross.png"
   - name: "Moersleutel"
     url: "https://moersleutel.com/"
     logo: "/breweries/moersleutel.png"
+    active: true
   - name: "Verdant"
     url: "https://verdantbrewing.co/"
     logo: "/breweries/verdant.png"
@@ -27,6 +29,7 @@ breweries:
   - name: "Vitamin Sea"
     url: "https://vitaminseabrewing.com/"
     logo: "/breweries/vitamin-sea.png"
+    active: true
   - name: "Amundsen"
     url: "https://www.amundsenbrewery.com/"
     logo: "/breweries/amundsen.png"
@@ -60,6 +63,7 @@ breweries:
   - name: "Funky Fluid"
     url: "https://funkyshop.pl/en/"
     logo: "/breweries/funky-fluid.png"
+    active: true
   - name: "Pinta"
     url: "https://browarpinta.pl/"
     logo: "/breweries/pinta.png"
@@ -72,11 +76,28 @@ breweries:
   - name: "Arpus"
     url: "https://arpusbrewing.co/"
     logo: "/breweries/arpus.png"
+    active: true
   - name: "BBNO"
     url: "https://bbno.co/"
     logo: "/breweries/bbno.png"
+    active: true
   - name: "Wander Beyond"
     url: "https://www.wanderbeyondbrewing.com/"
     logo: "/breweries/wander-beyond.png"
+  - name: "Kykao"
+    url: "https://kykao.gr/el/"
+    logo: "/breweries/kykao.png"
+  - name: "Prizm"
+    url: "https://www.prizmbrewing.com/"
+    logo: "/breweries/prizm.png"
+  - name: "Strange Brew"
+    url: "https://www.strangebrew.gr/"
+    logo: "/breweries/strange-brew.png"
+  - name: "Garage"
+    url: "https://garagebeer.co/"
+    logo: "/breweries/garage.png"
+  - name: "Sand city"
+    url: "https://www.sandcitybeer.com/"
+    logo: "/breweries/sand-city.png"
 
 ---
