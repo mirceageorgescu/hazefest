@@ -1,14 +1,16 @@
-<nav class="pv4-ns pt4 ph3 ph4-ns bg-black" role="navigation">
+<nav class="pv4 ph4 bg-black" role="navigation">
   {{ partial "i18nlist.html" . }}
     {{ if .Site.Menus.main }}
       <div class="overflow-hidden">
         <a href="{{ .Site.Home.RelPermalink }}" class="f3 fw2 hover-white no-underline white-90 tc db fl-l">
-            <img src="/logo.svg" class="dib db-l" width="100" alt="{{ $.Site.Title }}" />
+            <img src="/logo.svg" class="db dib-m" width="100" alt="{{ $.Site.Title }}" />
         </a>
-        <div class="fr-l mt3-m mt1-l mt3">
+        <div class="fr-l mt3-m mt1-l" id="site-navigation">
           {{ partial "i18nlist.html" . }}
           {{ if .Site.Menus.main }}
-            <ul class="pl0 tc mv0">
+            <label class="f1 dn-ns hamburger" for="toggle-mobile-menu" aria-label="Menu">&#9776;</label>
+            <input id="toggle-mobile-menu" class="dn" type="checkbox" />
+            <ul class="pl0 tc mv0 dn db-ns" id="main-menu">
               {{ range .Site.Menus.main }}
               <li class="list f5 f4-l fw4 db dib-ns pr3-ns">
                 <a class="hover-white no-underline db dib-ns white-90 pv2" href="{{ .URL }}" title="{{ i18n "pageTitle" . }}">
@@ -22,3 +24,14 @@
       </div>
     {{ end }}
 </nav>
+<style>
+  #site-navigation > input:checked + #main-menu {
+    display: block;
+    margin-top: 30px;
+  }
+  .hamburger {
+    position: absolute;
+    top: 23px;
+    right: 33px;
+  }
+</style>
