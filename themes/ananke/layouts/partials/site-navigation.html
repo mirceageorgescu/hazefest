@@ -12,11 +12,13 @@
             <input id="toggle-mobile-menu" class="dn" type="checkbox" />
             <ul class="pl0 tc mv0 dn db-ns" id="main-menu">
               {{ range .Site.Menus.main }}
-              <li class="list f5 f4-l fw4 db dib-ns pr3-ns">
-                <a class="hover-white no-underline db dib-ns white-90 pv2" href="{{ .URL }}" title="{{ i18n "pageTitle" . }}">
-                  {{ .Name }}
-                </a>
-              </li>
+                {{ if .Name }}
+                  <li class="list f5 f4-l fw4 db dib-ns ph2-ns">
+                    <a class="hover-white no-underline db dib-ns white-90 pv2" href="{{ .URL }}" title="{{ i18n "pageTitle" . }}">
+                      {{ .Name }}
+                    </a>
+                  </li>
+                {{ end }}
               {{ end }}
             </ul>
           {{ end }}
