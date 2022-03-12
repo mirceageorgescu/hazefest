@@ -13,11 +13,11 @@
     </header>
 
     {{ if .Content }}
-    <article class="center cf pv5 ph3 ph4-ns mw7">
-      <div class="nested-copy-line-height lh-copy f4 nested-links {{ $.Param "text_color" | default "mid-gray" }}">
-        {{ .Content }}
-      </div>
-    </article>
+      <article class="center cf pv5 ph3 ph4-ns mw7">
+        <div class="nested-copy-line-height lh-copy f4 nested-links {{ $.Param "text_color" | default "mid-gray" }}">
+          {{ .Content }}
+        </div>
+      </article>
     {{ end }}
 
     {{ if .Params.hasMap }}
@@ -44,6 +44,28 @@
           {{ end }}
         </ul>
       </article>
+    {{ end }}
+
+    {{ if .Params.about }}
+      <article>
+        <ul class="mh0 ph0 mv0">
+          {{ range $index, $element := .Params.about }}
+            
+              <li class="list pv4 ph5 {{if not (modBool $index 2)}}bg-purple{{end}}">
+                <div class="mw7 center f4 lh-copy">
+                  {{ . }}
+                </div>
+              </li>
+            
+          {{ end }}
+        </ul>
+      </article>
+    {{ end }}
+
+    {{ if .Params.cta }}
+    <div class="tc pv5">
+      <a class="f4 f3-m f2-l grow no-underline br-pill ph5 pv3 pv4-l mb2 dib white bg-dark-pink bebas" href="{{ .Params.cta.url }}" target="_blank">{{ .Params.cta.copy }}</a>
+    </div>
     {{ end }}
 
   </div>

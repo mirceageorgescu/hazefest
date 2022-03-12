@@ -1,60 +1,53 @@
 {{ define "main" }}
- <article class="cf ph3 pv3 pv4-l f4 tc-l center measure-wide lh-copy {{ $.Param "text_color" | default "mid-gray" }}">
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet aliquam libero, et aliquam ex. Sed facilisis ipsum nulla, pellentesque varius augue faucibus id. Quisque eget sagittis neque. Nulla rhoncus commodo nibh, ac pulvinar erat commodo ultrices. Donec eget pulvinar dolor. Mauris finibus urna eget sagittis dignissim. Sed lorem neque, molestie ac tincidunt vitae, vulputate posuere libero. Maecenas efficitur leo a dignissim imperdiet. Vestibulum tincidunt tortor ac dolor rutrum tristique. Nullam non lorem consequat, sollicitudin diam in, convallis tellus. Pellentesque non arcu risus. Quisque scelerisque scelerisque diam a venenatis. In hac habitasse platea dictumst. Morbi pulvinar luctus tortor, sit amet consectetur ipsum bibendum et. Cras aliquam consequat libero eget scelerisque. Duis eu lacus ut ex hendrerit hendrerit.</p>
-  </article>
-  <ul class="cf w-100 ph0 mb0">
-    <li class="list fl w-50 w-third-m w-25-ns">
-      <div class="aspect-ratio aspect-ratio--1x1">
-        <img style="background-image:url(/gallery/1.jpg);"
-          class="db bg-center cover aspect-ratio--object" />
-      </div>
-    </li>
-    <li class="list fl w-50 w-third-m w-25-ns">
-      <div class="aspect-ratio aspect-ratio--1x1">
-        <img style="background-image:url(/gallery/2.jpg);"
-          class="db bg-center cover aspect-ratio--object" />
-      </div>
-    </li>
-    <li class="list fl w-50 w-third-m w-25-ns">
-      <div class="aspect-ratio aspect-ratio--1x1">
-        <img style="background-image:url(/gallery/3.jpg);"
-          class="db bg-center cover aspect-ratio--object" />
-      </div>
-    </li>
-    <li class="list fl w-50 w-third-m w-25-ns">
-      <div class="aspect-ratio aspect-ratio--1x1">
-        <img style="background-image:url(/gallery/4.jpg);"
-          class="db bg-center cover aspect-ratio--object" />
-      </div>
-    </li>
-    <li class="list fl w-50 w-third-m w-25-ns">
-      <div class="aspect-ratio aspect-ratio--1x1">
-        <img style="background-image:url(/gallery/5.jpg);"
-          class="db bg-center cover aspect-ratio--object" />
-      </div>
-    </li>
-    <li class="list fl w-50 w-third-m w-25-ns">
-      <div class="aspect-ratio aspect-ratio--1x1">
-        <img style="background-image:url(/gallery/6.jpg);"
-          class="db bg-center cover aspect-ratio--object" />
-      </div>
-    </li>
-    <li class="list fl w-50 w-third-m w-25-ns">
-      <div class="aspect-ratio aspect-ratio--1x1">
-        <img style="background-image:url(/gallery/7.jpg);"
-          class="db bg-center cover aspect-ratio--object" />
-      </div>
-    </li>
-    <li class="list fl w-50 w-third-m w-25-ns">
-      <div class="aspect-ratio aspect-ratio--1x1">
-        <img style="background-image:url(/gallery/8.jpg);"
-          class="db bg-center cover aspect-ratio--object" />
-      </div>
-    </li>
-   </ul>
-   <blockquote class="ph4 f4 f1-ns mw7 center mv0 pv4 tc">
-      <div class="bebas f1 f-headline-ns pt4" style="line-height:0.5;">“</div>
-      <p class="f3 f2-ns fw4 mt0 mb0 lh-solid bebas">Best craft beer festival in Romania. Tons of great beer, great mood, tons of fun.</p>
-      <cite class="f6 ttu tracked fs-normal">―Razvan Costache, Universitatea de bere</cite>
-   </blockquote>
+
+  {{ if .Params.about }}
+    <ul class="ph0 mv0 w-100 flex-l">
+      {{ range $index, $element := .Params.about }}
+        <li class="list flex-l justify-center flex-column items-center w-100 pv3 ph5 pa4-ns pa4-l pa5-xl tc f4 lh-copy is-square-l relative" style="background: {{if not (modBool $index 2)}}#6522d6{{else}}#5518bc{{end}}">
+            <span class="f1 f-headline-l dn db-l fw4 ttu bebas lh-solid absolute o-10" style="font-size: calc(100vw/5)">{{ add $index 1 }}</span>
+            {{ . }}
+        </li>
+      {{ end }}
+    </ul>
+  {{ end }}
+  <style>
+    @media screen and (min-width: 60em) {
+      .is-square-l {
+        aspect-ratio: 1/1;
+      }
+    }
+    @media screen and (min-width: 80em) {
+      .pa5-xl {
+        padding: 4rem;
+      }
+    }
+  </style>
+
+  {{ if .Params.quotes }}
+    {{ range .Params.quotes }}
+      <blockquote class="ph4 f4 f1-ns mw7 center mv0 pv4 tc is-quote dn">
+        <div class="bebas f1 f-headline-ns pt4" style="line-height:0.5;">“</div>
+        <p class="f3 f2-ns fw4 mt0 mb0 lh-solid bebas i">{{- .quote | safeHTML -}}</p>
+        <cite class="f6 ttu tracked fs-normal">―{{ .author }}, <a href="{{ .url }}" class="white">{{ .source }}</a></cite>
+     </blockquote>
+    {{ end }}
+    <script>
+      var quotes = document.getElementsByClassName("is-quote");
+      var randomQuoteNo = Math.floor(Math.random() * quotes.length);
+      quotes[randomQuoteNo].style.display = 'block';
+    </script>
+  {{ end }}
+
+  {{ if .Params.gallery }}
+    <ul class="cf w-100 ph0 mv0">
+      {{ range .Params.gallery }}
+        <li class="list fl w-50 w-third-m w-25-ns {{ .class }}">
+          <div class="aspect-ratio aspect-ratio--1x1 overflow-hidden">
+            <a target="_blank" href="{{ .url }}" style="background-image:url({{ .img }});"
+              class="db bg-center cover aspect-ratio--object grow"></a>
+          </div>
+        </li>
+      {{ end }}
+    </ul>
+  {{ end }}
 {{ end }}

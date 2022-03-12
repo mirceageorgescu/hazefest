@@ -1,0 +1,48 @@
+---
+title: "Index"
+layout: index
+hasLogo: true
+about:
+  - "Haze fest is the only international all inclusive / all you can taste festival in Romania."
+  - "The ticket gives you access to over 150 beers from over 35 breweries all over the world."
+  - "How does it work? The ticket includes one tasting glass which you can use to try all the beers."
+  - "For real. You can drink all you want for two days from the best beers in the world."
+gallery:
+  - img: "/gallery/1.jpg"
+    url: "https://www.instagram.com/p/B3zcSxLJklP/"
+  - img: "/gallery/2.jpg"
+    url: "https://www.instagram.com/p/B3z-LKZJCls/"
+  - img: "/gallery/3.jpg"
+    url: "https://www.instagram.com/p/B3zpf47p_wb/"
+  - img: "/gallery/4.jpg"
+    url: "https://www.instagram.com/p/B3zjtQuJ9S-/"
+  - img: "/gallery/5.jpg"
+    url: "https://www.instagram.com/p/B3zU78zph3t/"
+  - img: "/gallery/6.jpg"
+    url: "https://www.instagram.com/p/B3xrFdwpql0/"
+  - img: "/gallery/7.jpg"
+    url: "https://www.instagram.com/p/B3xPZXuJLJu/"
+  - img: "/gallery/8.jpg"
+    url: "https://www.instagram.com/p/B3wyPO8pm4B/"
+  - img: "/gallery/9.jpg"
+    url: "https://www.instagram.com/p/B3wtQ1HpzOa/"
+    class: "dn dn-l db-m"
+quotes:
+  - quote: "Hazefest is more than a beer festival, Hazefest is a welcoming community of people passionate about beer and brewing.<br><br>Chill, discover new beers, and explore the phenomenon called craft beer."
+    author: "Razvan Costache"
+    source: "Universitatea de bere"
+    url: "https://universitateadebere.ro/"
+  - quote: "As far as Romanian craft beer festivals go, this one takes the top spot.<br><br>From crispy bois and crushable hazies to high octane imperial stouts, from international headliners to local heavyweights, Haze Fest has them all.<br><br>A fantastic 2-days all-you-can-drink bonanza you definitely don't want to miss out on."
+    author: "Teodora Romano"
+    source: "Beerologique"
+    url: "https://beerologique.org/"
+  - quote: "The first Romanian festival with an out of this world lineup. Limitless great beer = incredible experience."
+    author: "Alexandru Vasile"
+    source: "Linii si puncte"
+    url: "https://www.youtube.com/channel/UC-uj_WygLlbDMHj5XDmtRJQ"
+  - quote: "The first festival where you can taste everything without paying."
+    author: "Dorin Nicolaescu Musteata"
+    source: "Dorin's Beers"
+    url: "https://www.facebook.com/DorinsBeers"
+
+---
