@@ -1,6 +1,9 @@
 ---
-title: "All you can handle craft beer tasting sessions"
+title: "Homepage"
 layout: index
+menu:
+  main:
+    weight: 10
 header:
   bg: "/hero-bg.jpg"
   partners:

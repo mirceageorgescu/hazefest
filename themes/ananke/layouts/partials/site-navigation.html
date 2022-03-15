@@ -10,11 +10,17 @@
           {{ if .Site.Menus.main }}
             <label class="f1 dn-ns hamburger" for="toggle-mobile-menu" aria-label="Menu">&#9776;</label>
             <input id="toggle-mobile-menu" class="dn" type="checkbox" />
-            <ul class="pl0 tc mv0 dn db-ns" id="main-menu">
+            <ul class="pl0 tc mv0 dn db-ns bebas" id="main-menu">
+              {{ $current := . }}
               {{ range .Site.Menus.main }}
                 {{ if .Name }}
-                  <li class="list f5 f4-l fw4 db dib-ns ph2-ns">
-                    <a class="hover-white no-underline db dib-ns white-90 pv2" href="{{ .URL }}" title="{{ i18n "pageTitle" . }}">
+                  <li class="list f4 f3-l fw4 db dib-ns ph3-ns">
+                    {{ $active := or ($current.IsMenuCurrent "nav" .) ($current.HasMenuCurrent "nav" .) }}
+                    {{ $active = or $active (eq .Name $current.Title) }}
+                    {{ $active = or $active (and (eq .Name "Blog") (eq $current.Section "post")) }}
+                    {{ $active = or $active (and (eq .Name "Tags") (eq $current.Section "tags")) }}
+                    {{ $active = or $active (eq .Name $current.Title) }}
+                    <a class="hover-white db dib-ns white-90 pv2 {{ if $active }}underline{{ else }}no-underline{{ end }}" href="{{ .URL }}" title="{{ i18n "pageTitle" . }}">
                       {{ .Name }}
                     </a>
                   </li>
