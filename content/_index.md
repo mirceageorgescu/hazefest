@@ -1,7 +1,6 @@
 ---
-title: "Index"
+title: "All you can handle craft beer tasting sessions"
 layout: index
-hasLogo: true
 header:
   bg: "/hero-bg.jpg"
   partners:

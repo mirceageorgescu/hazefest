@@ -1,7 +1,6 @@
 ---
 title: "Breweries"
 layout: breweries
-hasLogo: true
 menu:
   main:
     weight: 20
