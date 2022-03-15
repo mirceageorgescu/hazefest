@@ -40,7 +40,7 @@ quotes:
     author: "Alexandru Vasile"
     source: "Linii si puncte"
     url: "https://www.youtube.com/channel/UC-uj_WygLlbDMHj5XDmtRJQ"
-  - quote: "The first festival where you can taste everything without paying."
+  - quote: "HazeFest is where you get most tick for your buck. Checks every (missing) box..."
     author: "Dorin Nicolaescu Musteata"
     source: "Dorin's Beers"
     url: "https://www.facebook.com/DorinsBeers"

@@ -96,7 +96,7 @@ breweries:
   - name: "Garage"
     url: "https://garagebeer.co/"
     logo: "/breweries/garage.png"
-  - name: "Sand city"
+  - name: "Sand City"
     url: "https://www.sandcitybeer.com/"
     logo: "/breweries/sand-city.png"
 

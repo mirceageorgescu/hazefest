@@ -14,6 +14,14 @@
     @media screen and (min-width: 60em) {
       .is-square-l {
         aspect-ratio: 1/1;
+        overflow: hidden;
+      }
+      .is-square-l .f-headline-l {
+        transition: transform 1000ms ease-out;
+        pointer-events:  none;
+      }
+      .is-square-l:hover .f-headline-l {
+        transform: scale(3) rotate(360deg);
       }
     }
     @media screen and (min-width: 80em) {

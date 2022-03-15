@@ -63,9 +63,35 @@
     {{ end }}
 
     {{ if .Params.cta }}
-    <div class="tc pv5">
-      <a class="f4 f3-m f2-l grow no-underline br-pill ph5 pv3 pv4-l mb2 dib white bg-dark-pink bebas" href="{{ .Params.cta.url }}" target="_blank">{{ .Params.cta.copy }}</a>
-    </div>
+      <div class="tc pv5">
+        <a class="f4 f3-m f2-l grow no-underline br-pill ph5 pv3 pv4-l mb2 dib white bg-dark-pink bebas" href="{{ .Params.cta.url }}" target="_blank">{{ .Params.cta.copy }}</a>
+      </div>
+    {{ end }}
+
+    {{ if .Params.contact }}
+      <article class="center cf pv5 ph3 ph4-ns mw7">
+        <form name="contact" method="POST" data-netlify="true">
+          <div class="measure center">
+            <label for="name" class="f6 b db mb2">Name <span class="normal black-60"></span></label>
+            <input id="name" class="input-reset ba b--light-purple bg-light-purple pa3 mb4 db w-100" type="text">
+          </div>
+          <div class="measure center">
+            <label for="email" class="f6 b db mb2">Email <span class="normal black-60"></span></label>
+            <input id="email" class="input-reset ba b--light-purple bg-light-purple pa3 mb4 db w-100" type="email">
+          </div>
+          <div class="measure center">
+            <label for="phone" class="f6 b db mb2">Phone <span class="normal black-60"></span></label>
+            <input id="phone" class="input-reset ba b--light-purple bg-light-purple pa3 mb4 db w-100" type="text">
+          </div>
+          <div class="measure center">
+            <label for="message" class="f6 b db mb2">Message <span class="normal black-60"></span></label>
+            <textarea id="message" name="message" class="input-reset db border-box b--light-purple bg-light-purple hover-black w-100 measure ba pa3 mb2"></textarea>
+          </div>
+          <div class="measure center tc">
+            <button type="submit" class="input-reset f6 dim ph4 pv3 mb2 dib white bg-purple b--purple db">Send message</button>
+          </div>
+        </form>
+      </article>
     {{ end }}
 
   </div>
