@@ -51,8 +51,9 @@
       {{ range .Params.gallery }}
         <li class="list fl w-50 w-third-m w-25-ns {{ .class }}">
           <div class="aspect-ratio aspect-ratio--1x1 overflow-hidden">
-            <a target="_blank" href="{{ .url }}" style="background-image:url({{ .img }});"
-              class="db bg-center cover aspect-ratio--object grow"></a>
+            <a target="_blank" href="{{ .url }}" class="db bg-center cover aspect-ratio--object grow" style="background: {{ .dominant}};">
+              <img src="{{ .img }}" loading="lazy">
+            </a>
           </div>
         </li>
       {{ end }}
