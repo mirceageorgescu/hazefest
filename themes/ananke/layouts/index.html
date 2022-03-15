@@ -3,7 +3,7 @@
   {{ if .Params.about }}
     <ul class="ph0 mv0 w-100 flex-l">
       {{ range $index, $element := .Params.about }}
-        <li class="list flex-l justify-center flex-column items-center w-100 pv3 ph5 pa4-ns pa4-l pa5-xl tc f4 lh-copy is-square-l relative" style="background: {{if not (modBool $index 2)}}#6522d6{{else}}#5518bc{{end}}">
+        <li class="list flex-l justify-center flex-column items-center w-100 pv3 ph5 pa4-ns pa4-l pa5-xl tc f5 f4-l lh-copy is-square-l relative" style="background: {{if not (modBool $index 2)}}#6522d6{{else}}#5518bc{{end}}">
             <span class="f1 f-headline-l dn db-l fw4 ttu bebas lh-solid absolute o-10" style="font-size: calc(100vw/5)">{{ add $index 1 }}</span>
             {{ . }}
         </li>
@@ -33,8 +33,8 @@
 
   {{ if .Params.quotes }}
     {{ range .Params.quotes }}
-      <blockquote class="ph4 f4 f1-ns mw7 center mv0 pv4 tc is-quote dn">
-        <div class="bebas f1 f-headline-ns pt4" style="line-height:0.5;">“</div>
+      <blockquote class="ph4 f4 f1-ns mw7 center mv0 pv5 pv6-l tc is-quote dn">
+        <div class="bebas f1 f-headline-ns pt3" style="line-height:0.5;">“</div>
         <p class="f3 f2-ns fw4 mt0 mb0 lh-solid bebas i">{{- .quote | safeHTML -}}</p>
         <cite class="f6 ttu tracked fs-normal">―{{ .author }}, <a href="{{ .url }}" class="white">{{ .source }}</a></cite>
      </blockquote>
