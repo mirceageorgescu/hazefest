@@ -2,6 +2,17 @@
 title: "Index"
 layout: index
 hasLogo: true
+header:
+  bg: "/hero-bg.jpg"
+  partners:
+    - name: "Radio Guerilla"
+      logo: "/logo-guerilla.svg"
+  title: "all you can handle<br>craft beer tasting sessions"
+  subtitle: "30+ International breweries, 60+ beers/day"
+  details: "18-19 JUNE 2022 – Club Expirat, Bucharest, Romania"
+  cta:
+    copy: "Get your ticket now!"
+    url: "https://hazefest.iabilet.ro/"
 about:
   - "Haze fest is the only international all inclusive / all you can taste festival in Romania."
   - "The ticket gives you access to over 150 beers from over 35 breweries all over the world."

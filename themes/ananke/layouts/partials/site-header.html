@@ -1,18 +1,34 @@
-<header>
-  {{ partial "site-navigation.html" . }}
-  <div class="dt w-100 tc white cover hero" style="background: #7a30f5 url(/hero-bg.jpg) no-repeat top center; background-size: cover; height: calc(100vh - 103px);">
+{{ partial "site-navigation.html" . }}
+
+{{ if .Params.header }}
+  <div class="dt w-100 tc white cover hero" style="background: #7a30f5 url({{ .Params.header.bg }}) no-repeat top center; background-size: cover; height: calc(100vh - 103px);">
     <div class="dtc v-mid">
       <header class="white-100 center">
-        <img src="/logo-guerilla.svg" class="w-100" style="width: 100px;">
-        <div class="mw8 mt4 ph3 center">
-          <h2 class="f1 f-headline-l fw4 ttu mt0 mb2 bebas lh-solid">all you can handle<br>craft beer tasting sessions</h2>
-          <h3 class="f3 f1-l fw4 mt0 mb2 lh-solid bebas">30+ International breweries, 60+ beers/day</h3>
-          <h4 class="f5 f3-l dib ph2 mt0 mb3 mb5-l pv1 fw4">18-19 JUNE 2022 – Club Expirat, Bucharest, Romania</h4>
+        {{ if .Params.header.partners }}
+          {{ range .Params.header.partners }}
+            <img src="{{ .logo }}" class="w-100" style="width: 100px;">
+          {{ end }}
+        {{ end }}
+
+        {{ if .Params.header.title }}
+          <h2 class="f1 f-headline-l fw4 ttu mt0 mb2 bebas lh-solid">{{- .Params.header.title | safeHTML -}}</h2>
+        {{ end }}
+
+        {{ if .Params.header.subtitle }}
+          <h3 class="f3 f1-l fw4 mt0 mb2 lh-solid bebas">{{ .Params.header.subtitle }}</h3>
+        {{ end }}
+
+        {{ if .Params.header.details }}
+          <h3 class="f5 f3-l dib ph2 mt0 mb3 mb5-l pv1 fw4">{{ .Params.header.details }}</h3>
+        {{ end }}
+
+        {{ if .Params.header.cta }}
           <div>
-            <a class="f4 f3-m f2-l grow no-underline br-pill ph5 pv3 pv4-l mb2 dib white bg-dark-pink bebas" href="https://www.iabilet.ro/bilete-haze-fest-2022-71613/" target="_blank">Get your ticket now!</a>
+            <a class="f4 f3-m f2-l grow no-underline br-pill ph5 pv3 pv4-l mb2 dib white bg-dark-pink bebas" href="{{ .Params.header.cta.url }}" target="_blank">{{ .Params.header.cta.copy }}</a>
           </div>
+        {{ end }}
         </div>
       </header>
     </div>
   </div>
-</header>
+{{ end }}

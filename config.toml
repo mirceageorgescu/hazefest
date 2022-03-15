@@ -21,4 +21,10 @@ name = "instagram"
 url = "https://www.instagram.com/hazefestromania/"
 label = "TND Instagram"
 
+[menu]
 [[menu.main]]
+  identifier = 'Tickets'
+  name = 'Tickets'
+  url = 'https://hazefest.iabilet.ro/'
+  weight = 40
+  target = '_blank'

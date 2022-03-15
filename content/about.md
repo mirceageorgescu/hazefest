@@ -6,5 +6,5 @@ about:
   - "For real now: you can drink all you want for two days from the best beers in the world."
 cta:
   copy: "Get you ticket now"
-  url: "/tickets/"
+  url: "https://hazefest.iabilet.ro/"
 ---
