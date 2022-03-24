@@ -105,5 +105,14 @@ breweries:
   - name: "Oriel"
     url: "https://www.orielbeer.com/"
     logo: "/breweries/oriel.png"
+  - name: "Noah"
+    url: "https://www.facebook.com/BereArtizanalaDinArdeal/"
+    logo: "/breweries/noah.png"
+  - name: "Anagram"
+    url: "https://www.facebook.com/AnagramBrewing/"
+    logo: "/breweries/anagram.png"
+  - name: "Blackout"
+    url: "https://www.facebook.com/blackoutbrewing"
+    logo: "/breweries/blackout.png"
 
 ---
