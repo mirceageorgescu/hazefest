@@ -114,5 +114,11 @@ breweries:
   - name: "Blackout"
     url: "https://www.facebook.com/blackoutbrewing"
     logo: "/breweries/blackout.png"
+  - name: "Hop Hooligans"
+    url: "https://www.hophooligans.ro/"
+    logo: "/breweries/hop-hooligans.png"
+  - name: "Bereta"
+    url: "https://www.bereta.ro/"
+    logo: "/breweries/bereta.png"
 
 ---
