@@ -99,5 +99,11 @@ breweries:
   - name: "Sand City"
     url: "https://www.sandcitybeer.com/"
     logo: "/breweries/sand-city.png"
+  - name: "Wicked Barrel"
+    url: "https://wickedbarrel.ro/"
+    logo: "/breweries/wicked-barrel.png"
+  - name: "Oriel"
+    url: "https://www.orielbeer.com/"
+    logo: "/breweries/oriel.png"
 
 ---
