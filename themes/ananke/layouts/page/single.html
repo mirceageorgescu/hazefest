@@ -39,7 +39,7 @@
           {{ range sort .Params.breweries "name" }}
             
               <li class="list fl w-50 w-25-m w-20-ns ph4 pv4">
-                <a class="db aspect-ratio aspect-ratio--1x1" href="{{ .url }}" title="{{ .name }}">
+                <a class="db aspect-ratio aspect-ratio--1x1" href="{{ .url }}" title="{{ .name }}" target="_blank">
                   <img src="{{ .logo }}" alt="{{ .name }}" class="db bg-center cover aspect-ratio--object">
                 </a>
               </li>

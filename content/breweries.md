@@ -120,5 +120,8 @@ breweries:
   - name: "Bereta"
     url: "https://www.bereta.ro/"
     logo: "/breweries/bereta.png"
+  - name: "Anastasiou"
+    url: "https://www.instagram.com/anastasiou_brewery/"
+    logo: "/breweries/anastasiou.png"
 
 ---
