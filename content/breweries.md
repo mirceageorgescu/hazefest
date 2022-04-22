@@ -120,5 +120,8 @@ breweries:
   - name: "Anastasiou"
     url: "https://www.instagram.com/anastasiou_brewery/"
     logo: "/breweries/anastasiou.png"
+  - name: "Protokoll Brewery"
+    url: "http://protokollberlin.de/"
+    logo: "/breweries/protokoll.png"
 
 ---
