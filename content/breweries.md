@@ -1,6 +1,6 @@
 ---
 title: "Breweries"
-subtitle: "The list is a work in progress displaying confirmed breweries. More to follow soon."
+subtitle: "Complete list of participating breweries below."
 layout: breweries
 menu:
   main:
