@@ -11,7 +11,7 @@ header:
       logo: "/logo-guerilla.svg"
   title: "all you can handle<br>craft beer tasting sessions"
   subtitle: "30+ International breweries, 60+ beers/day"
-  details: "18-19 JUNE 2022 – Club Expirat, Bucharest, Romania"
+  details: "18-19 JUNE 2022 - 14:00 - 20:00 – Club Expirat, Bucharest, Romania"
   cta:
     copy: "Get your ticket now!"
     url: "https://hazefest.iabilet.ro/"
