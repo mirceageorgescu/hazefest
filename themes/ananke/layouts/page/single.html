@@ -97,5 +97,13 @@
       </article>
     {{ end }}
 
+    {{ if .Params.beerlist }}
+      <article class="center cf pv5 mw8">
+          {{ range .Params.beerlist }}
+            <img src="/{{ .image }}" class="w-100">
+          {{ end }}
+      </article>
+    {{ end }}
+
   </div>
 {{ end }}
