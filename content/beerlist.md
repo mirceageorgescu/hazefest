@@ -1,6 +1,6 @@
 ---
 title: "Beerlist"
-subtitle: "Complete list of beers below."
+subtitle: "You'll find copies of the printed beerlist at the entrance so you don't need to do anything. Just enjoy the haze 🙌"
 layout: beers
 menu:
   main:
