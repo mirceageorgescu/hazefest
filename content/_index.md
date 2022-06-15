@@ -10,7 +10,7 @@ header:
     - name: "Radio Guerilla"
       logo: "/logo-guerilla.svg"
   title: "all you can handle<br>craft beer tasting sessions"
-  subtitle: "30+ International breweries, 60+ beers/day"
+  subtitle: "30+ International breweries, 70+ new beers every day"
   details: "18-19 JUNE 2022 - 14:00 - 20:00 – Club Expirat, Bucharest, Romania"
   cta:
     copy: "Get your ticket now!"
